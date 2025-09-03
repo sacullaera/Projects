@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulmatrix - Gestão de riscos</title>
+    <link rel="stylesheet" href="style.css"> <!--Estilo para a página do site-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!--Ícones do font awesome-->
+    <script src="script.js" defer></script> <!-- Script para o funcionamento do menu -->
+</head>
+<body>
+    <!-- Overlay para escurecer o fundo quando o menu estiver aberto -->
+    <div class="overlay" id="overlay"></div>
+
+    <!--Criando o login na plataforma-->
+    <div class="login-modal" id="loginModal"> <!--criação da modal de login-->
+        <div class="login-modal-content">
+            <span class="close-login-modal" id="closeLoginModal">&times;</span><!--botão para fechar a modal de login-->
+            <h2><i class="fas fa-lock"></i> Login</h2><!-- Título da modal de login -->
+            <form id="loginForm"><!-- Formulário de login -->
+                <div class="form-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+                </div>
+                <div class="form-group"> <!--campo para a senha-->
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua Senha" required>
+                </div>
+                <button type="submit" class="login-btn">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Menu Dropdown do usuário logado-->
+    <div class="user-dropdown" id="userDropdown"> <!--criação do menu dropdown do usuário-->
+        <ul> 
+            <li><a href="#"><i class="fas fa-user"></i> Perfil</a></li> <!--onde o usuário poderá ver e editar seu perfil-->
+            <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li> <!--onde o usuário poderá alterar configurações do sistema-->
+            <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Sair</a></li> <!--onde o usuário poderá sair do sistema-->
+        </ul>
+    </div>
+
+    <header>
+        <button class="hamburger-btn" id="Menu" aria-label="Menu"> <!--tag para a criação do botão do menu em formato de hamburger-->
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <h1>VULMATRIX</h1> <!-- cabeçalho do site deverá ser centralizado -->
+        
+        <!-- ÍCONE DE USUÁRIO QUE ESTAVA FALTANDO -->
+        <div class="user-icon" id="userIcon">
+            <i class="fas fa-user"></i>
+            <span id="userStatus">Entrar</span>
+        </div>
+    </header>
+
+    <!--Menu lateral-->
+    <nav class="side-menu" id="sideMenu"> <!--criação do menu lateral-->
+        <div class="menu-header">
+            <h2>Menu</h2>
+            <button class="close-btn" id="closeBtn" aria-label="Fechar Menu">&times;</button> <!--aria-label permite a leitura de acessibilidade-->
+        </div>
+        <ul class="menu-items">
+            <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li><!--onde irão existir as informações gerais. Tela principal-->
+            <li><a href="#"><i class="fas fa-server"></i> Ativos</a></li><!--página para gestão dos ativos com opções de excluir, incluir, editar-->
+            <li><a href="#"><i class="fas fa-bug"></i> Vulnerabilidades</a></li><!--página para gestão das vulnerabilidades. API CVE, CVSS, NVD-->
+            <li><a href="#"><i class="fas fa-chess-knight"></i> MITRE ATTACK Framework</a></li><!--página para gestão do MITRE ATTACK Framework. API Mitre-->
+            <li><a href="#"><i class="fas fa-brain"></i> CTI</a></li><!--página para criação de um banco de dados de processos e procedimentos, criação de uma inteligência-->
+            <li><a href="#"><i class="fas fa-chart-bar"></i> Relatórios</a></li><!--página para gestão dos relatórios de ativos, vulnerabilidades e demais.-->
+        </ul>
+    </nav>
+    
+    <!-- Conteúdo dashboard -->
+    <main class="content">
+        <h2>Aqui é uma tela inicial apenas</h2>
+        <p>Este é o croqui que tenho disponível</p>
+        <p>Aqui ficará o dashboard com gráficos e informações relevantes e as demais páginas</p>
+    </main>
+</body>
+</html>
