@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de IMC</h1>
+        
+        <div class="input-group">
+            <label for="altura">Altura (m):</label>
+            <input type="number" id="altura" step="0.01" min="0" required>
+        </div>
+        <div class="input-group">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" min="0" required>
+        </div>
+        <button onclick="calcularIMC()">Calcular IMC</button>
+        
+        <div id="resultado" class="resultado"></div>
+        
+        <div class="tabela-referencia">
+            <h2>Tabela de Referência de IMC</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>IMC</th>
+                        <th>Classificação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Abaixo de 18,5</td>
+                        <td>Magricela</td>
+                    </tr>
+                    <tr>
+                        <td>18,5 - 24,9</td>
+                        <td>Saudável</td>
+                    </tr>
+                    <tr>
+                        <td>25 - 29,9</td>
+                        <td>Sobrepeso</td>
+                    </tr>
+                    <tr>
+                        <td>30 - 34,9</td>
+                        <td>Obesidade grau I</td>
+                    </tr>
+                    <tr>
+                        <td>35 - 39,9</td>
+                        <td>Obesidade grau II(Severa)</td>
+                    </tr>
+                    <tr>
+                        <td>Acima de 40</td>
+                        <td>Obesidade grau III(Mórbida)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="imc.js"></script>
+</body>
+</html>
